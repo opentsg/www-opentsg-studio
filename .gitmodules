@@ -1,0 +1,3 @@
+[submodule "themes/fohuw"]
+	path = themes/fohuw
+	url = https://github.com/mrmxf/fohuw.git
