@@ -1,0 +1,121 @@
+/*
+
+Add styles or override variables from the theme here.
+Header font is google maven pro bold
+*/
+
+$mrxGreen: #4F702A;
+$mrxAmber: #c2a649;
+$mrxPurple: #9A3A72;
+$mrxGrey: #333333;
+
+$primary: $mrxAmber !default;
+$primary-light: lighten($primary, 75%) !default;
+$secondary: $mrxPurple !default;
+$success: #77B66B !default;
+$info: #9A3A72 !default;
+$warning: #ED6A5A !default;
+$danger: #ED6A5A !default;
+$white: #fff !default;
+$light: #eeeeee !default;
+$dark: $mrxGrey !default;
+
+
+/* Background colors for the sections on home page etc.
+
+ It is a paint by number system, starting at 0, where the number is taken from
+ the shortcode's ordinal if not provided by the user. These colors are all part
+ of the theme palette, but the mix is fairly random to create variation. This
+ can be overridden by the project if needed.
+*/
+$td-box-colors:
+lighten($secondary, 30%),
+lighten($primary,   30%),
+lighten($secondary, 40%),
+lighten($primary,   35%),
+lighten($secondary, 50%),
+lighten($primary,   40%),
+lighten($secondary, 60%),
+lighten($primary,   50%),
+!default;
+
+// mrmxf colors
+// @mmYellow: #C2A649;
+// @mmGreen: #77B66B;
+// @mmPurple: #9A3A72;
+// @mmBlue: #433F87;
+// @mmRed: #F09A8D
+// @mmBlack: #000000;
+// @mmDark: #333333;
+// @mmLight: #eeeeee;
+// @mmWhite: #ffffff;
+
+/* figure captions */
+figcaption h4 {
+  font-family: "Cascadia";
+  color: $danger;
+}
+
+h1 {
+  font-weight: bolder;
+  color: $mrxPurple;
+}
+h1::first-letter {
+  color: $mrxGreen;
+}
+h2 {
+  font-weight: bolder;
+  color: $mrxGreen;
+}
+h3 {
+  font-weight: bolder;
+  color: $mrxGreen;
+}
+h4 {
+  font-weight: bolder;
+  color: lighten($secondary, 30%);
+}
+
+/* Custom fonts for Excalidraw */
+@font-face {
+  font-family: 'Virgil';
+  font-weight: 400;
+  font-style: normal;
+  src: url("/font/Virgil.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'Cascadia';
+  font-weight: 400;
+  font-style: normal;
+  src: url("/font/Cascadia.woff2") format('woff2');
+}
+
+/* Centered header with a divvviding line */
+
+.clhdr {
+  overflow: hidden;
+  text-align: center;
+  font-weight: bolder;
+  color: $mrxGreen;
+}
+
+.clhdr:before,
+.clhdr:after {
+  background-color: #000;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.clhdr:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.clhdr:after {
+  left: 0.5em;
+  margin-right: -50%;
+}

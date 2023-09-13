@@ -1,0 +1,38 @@
+<!doctype html>
+{{ `<!-- otsg _default/baseof.html -->` | safeHTML }}
+<html itemscope itemtype="http://schema.org/WebPage" lang="{{ .Site.Language.Lang }}" class="no-js">
+
+<head>
+  {{ partial "head.html" . }}
+</head>
+
+<body class="{{ with .Page.Params.body_class }} {{ . }}{{ end }}">
+  <div class="ui container">
+    <header>
+      {{ partial "navbar.html" . }}
+    </header>
+  </div>
+  <div class="ui container">
+    <div class="ui sixteen wide equal width  grid">
+      <div class="row">
+        <div class="sixteen wide fluid column">
+          <main role="main" class="ui main">
+            {{ with .CurrentSection.OutputFormats.Get "rss" -}}
+            <a class="td-rss-button" title="RSS" href="{{ .Permalink | safeURL }}" target="_blank" rel="noopener">
+              <i class="fa-solid fa-rss" aria-hidden="true"></i>
+            </a>
+            {{ end -}}
+            {{ block "main" . }}{{ end }}
+          </main>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      {{ partial "footer.html" . }}
+    </div>
+  </div>
+  </div>
+  {{ partial "body_scripts.html" . }}
+</body>
+
+</html>

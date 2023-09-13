@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1"
+	 id="svg249" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:svg="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ns1="http://sozi.baierouge.fr" inkscape:export-filename="/home/jimmac/gfx/novell/pdes/trunk/docs/BIGmime-text.png" inkscape:output_extension="org.inkscape.output.svg.inkscape" sodipodi:docbase="/home/jimmac/src/cvs/tango-icon-theme/scalable/mimetypes"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48"
+	 style="enable-background:new 0 0 48 48;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.4021;fill:url(#rect6709_00000013896348584909166780000009524990620048499873_);enable-background:new    ;}
+	.st1{opacity:0.4021;fill:url(#path6711_00000002371264037688504290000014399255643313264560_);enable-background:new    ;}
+	.st2{opacity:0.4021;fill:url(#path6713_00000027587912467266436080000009684683722436782515_);enable-background:new    ;}
+	
+		.st3{fill:url(#rect15391_00000123412347925624896090000006939822494371645840_);stroke:url(#rect15391_00000005258834054690922540000006883866478839158935_);stroke-linecap:round;stroke-linejoin:round;}
+	
+		.st4{fill:none;stroke:url(#rect15660_00000041983618596368675520000015181485005159876487_);stroke-linecap:round;stroke-linejoin:round;}
+	.st5{fill:#FFFFFF;stroke:#000000;stroke-width:0.2297;stroke-miterlimit:10;}
+	.st6{fill:url(#path15570_00000167395149622658455880000015312881957840621755_);}
+	.st7{fill:url(#path15577_00000075128176218141002680000009813334144122135169_);}
+	.st8{fill:none;stroke:#000000;stroke-width:0.9886;stroke-opacity:1.754400e-02;}
+	.st9{fill:none;stroke:#FFFFFF;stroke-opacity:0.2047;}
+	.st10{fill:#9B9B9B;}
+	.st11{fill:#FFFFFF;}
+	.st12{font-family:'ArialMT';}
+	.st13{font-size:12px;}
+	.st14{font-size:16px;}
+</style>
+<sodipodi:namedview  bordercolor="#666666" borderopacity="0.25490196" id="base" inkscape:current-layer="layer6" inkscape:cx="25.938708" inkscape:cy="24.318443" inkscape:document-units="px" inkscape:grid-bbox="true" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:showpageshadow="false" inkscape:window-height="688" inkscape:window-width="872" inkscape:window-x="343" inkscape:window-y="160" inkscape:zoom="5.6568542" pagecolor="#ffffff" showgrid="false">
+	</sodipodi:namedview>
+<g id="layer6" inkscape:groupmode="layer" inkscape:label="Shadow">
+	<g id="g6707" transform="matrix(.021055 0 0 .020868 42.852 41.154)">
+		
+			<linearGradient id="rect6709_00000118392857343379586500000018105961686542903706_" gradientUnits="userSpaceOnUse" x1="224128.1094" y1="-461060.5625" x2="224128.1094" y2="-461303.4375" gradientTransform="matrix(5.841499e-02 0 0 -4.110370e-02 -13981.9414 -19101.9961)">
+			<stop  offset="0" style="stop-color:#000000;stop-opacity:0"/>
+			<stop  offset="0.5" style="stop-color:#000000"/>
+			<stop  offset="1" style="stop-color:#000000;stop-opacity:0"/>
+		</linearGradient>
+		
+			<rect id="rect6709" x="-1559.3" y="-150.7" style="opacity:0.4021;fill:url(#rect6709_00000118392857343379586500000018105961686542903706_);enable-background:new    ;" width="1339.6" height="478.4"/>
+		
+			<radialGradient id="path6711_00000026842735775646040070000013628525712154356647_" cx="235730.9844" cy="-466811" r="117.14" gradientTransform="matrix(5.841499e-02 0 0 -4.110370e-02 -13981.3418 -19101.9961)" gradientUnits="userSpaceOnUse">
+			<stop  offset="0" style="stop-color:#000000"/>
+			<stop  offset="1" style="stop-color:#000000;stop-opacity:0"/>
+		</radialGradient>
+		
+			<path id="path6711" sodipodi:nodetypes="cccc" style="opacity:0.4021;fill:url(#path6711_00000026842735775646040070000013628525712154356647_);enable-background:new    ;" d="
+			M-219.6-150.7v478.3c142.9,0.9,345.4-107.2,345.4-239.2C125.8-43.6-33.7-150.7-219.6-150.7z"/>
+		
+			<radialGradient id="path6713_00000049221029251846547740000009170710596419747772_" cx="-208197.5625" cy="-466811" r="117.14" gradientTransform="matrix(-5.841499e-02 0 0 -4.110370e-02 -13729.5811 -19101.9961)" gradientUnits="userSpaceOnUse">
+			<stop  offset="0" style="stop-color:#000000"/>
+			<stop  offset="1" style="stop-color:#000000;stop-opacity:0"/>
+		</radialGradient>
+		
+			<path id="path6713" sodipodi:nodetypes="cccc" style="opacity:0.4021;fill:url(#path6713_00000049221029251846547740000009170710596419747772_);enable-background:new    ;" d="
+			M-1559.3-150.7v478.3c-142.8,0.9-345.4-107.2-345.4-239.2C-1904.7-43.6-1745.2-150.7-1559.3-150.7z"/>
+	</g>
+</g>
+<g id="layer1" inkscape:groupmode="layer" inkscape:label="Base">
+	
+		<radialGradient id="rect15391_00000004541518843415669690000013627397539454328721_" cx="45.1969" cy="27.8256" r="86.708" gradientTransform="matrix(0.9605 0 0 -1.0411 -10.7862 66.175)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#FAFAFA"/>
+		<stop  offset="1" style="stop-color:#BBBBBB"/>
+	</radialGradient>
+	
+		<radialGradient id="rect15391_00000060019255814903782340000016042328591819922057_" cx="17.7705" cy="56.7419" r="37.752" gradientTransform="matrix(0.9683 0 0 -1.0328 -5.3087 63.1288)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#A3A3A3"/>
+		<stop  offset="1" style="stop-color:#4C4C4C"/>
+	</radialGradient>
+	
+		<path id="rect15391" style="fill:url(#rect15391_00000004541518843415669690000013627397539454328721_);stroke:url(#rect15391_00000060019255814903782340000016042328591819922057_);stroke-linecap:round;stroke-linejoin:round;" d="
+		M7.8,3.6h32.6c0.6,0,1.1,0.5,1.1,1.1v38.6c0,0.6-0.5,1.1-1.1,1.1H7.8c-0.6,0-1.1-0.5-1.1-1.1V4.8C6.6,4.2,7.1,3.6,7.8,3.6z"/>
+	
+		<radialGradient id="rect15660_00000134220362484890392870000010234406853138109320_" cx="17.0898" cy="53.2301" r="38.159" gradientTransform="matrix(0.9683 0 0 -1.0328 -5.3087 63.1288)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="1" style="stop-color:#F8F8F8"/>
+	</radialGradient>
+	
+		<path id="rect15660" style="fill:none;stroke:url(#rect15660_00000134220362484890392870000010234406853138109320_);stroke-linecap:round;stroke-linejoin:round;" d="
+		M7.8,4.6h32.5c0.1,0,0.1,0.1,0.1,0.1v38.6c0,0.1-0.1,0.1-0.1,0.1H7.8c-0.1,0-0.1-0.1-0.1-0.1V4.7C7.7,4.7,7.7,4.6,7.8,4.6z"/>
+	<g id="g2270" transform="translate(.64645 -.037989)">
+		<g id="g1440" transform="matrix(.22970 0 0 .22970 4.9671 4.245)">
+			<path id="path1448" class="st5" d="M23.4,113.1c0,2-1.6,3.6-3.6,3.6c-2,0-3.6-1.6-3.6-3.6s1.6-3.6,3.6-3.6S23.4,111.1,23.4,113.1
+				z"/>
+			<path id="path1456" class="st5" d="M23.4,63.1c0,2-1.6,3.6-3.6,3.6c-2,0-3.6-1.6-3.6-3.6c0-2,1.6-3.6,3.6-3.6
+				S23.4,61.1,23.4,63.1z"/>
+		</g>
+		
+			<radialGradient id="path15570_00000040534602188360515680000007250645035922386565_" cx="935.7523" cy="-1397.9833" r="5.256" gradientTransform="matrix(0.2297 0 0 -0.2297 -205.5299 -290.8203)" gradientUnits="userSpaceOnUse">
+			<stop  offset="0" style="stop-color:#F0F0F0"/>
+			<stop  offset="1" style="stop-color:#9A9A9A"/>
+		</radialGradient>
+		<path id="path15570" style="fill:url(#path15570_00000040534602188360515680000007250645035922386565_);" d="M10,30
+			c0,0.5-0.4,0.8-0.8,0.8c-0.5,0-0.8-0.4-0.8-0.8s0.4-0.8,0.8-0.8S10,29.5,10,30z"/>
+		
+			<radialGradient id="path15577_00000162354031812583478720000002503875593714534814_" cx="935.7523" cy="-1347.9813" r="5.257" gradientTransform="matrix(0.2297 0 0 -0.2297 -205.5299 -290.8203)" gradientUnits="userSpaceOnUse">
+			<stop  offset="0" style="stop-color:#F0F0F0"/>
+			<stop  offset="1" style="stop-color:#9A9A9A"/>
+		</radialGradient>
+		<path id="path15577" style="fill:url(#path15577_00000162354031812583478720000002503875593714534814_);" d="M10,18.5
+			c0,0.5-0.4,0.8-0.8,0.8c-0.5,0-0.8-0.4-0.8-0.8s0.4-0.8,0.8-0.8S10,18,10,18.5z"/>
+	</g>
+	<path id="path15672" sodipodi:nodetypes="cc" class="st8" d="M11.5,5.5v37.9"/>
+	<path id="path15674" sodipodi:nodetypes="cc" class="st9" d="M12.5,5v38"/>
+</g>
+<rect x="12" y="29.9" class="st10" width="28" height="13.1"/>
+<text transform="matrix(1 0 0 1 14.1722 41.1737)" class="st11 st12 st13">XML</text>
+<text transform="matrix(1 0 0 1 14.4336 22.494)" class="st12 st14">&lt;/&gt;</text>
+</svg>

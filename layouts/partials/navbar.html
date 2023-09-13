@@ -1,0 +1,47 @@
+{{ `<!-- partials/navbar.html -->` | safeHTML }}
+{{ $isCovePage := and
+(.HasShortcode "blocks/cover")
+(not .Site.Params.ui.navbar_translucent_over_cover_disable)
+-}}
+
+<nav class="ui pointing menu">
+  <a href="{{ .Site.Home.RelPermalink }}">
+    <div class="item">
+      {{- if ne .Site.Params.ui.navbar_logo false -}}
+      <img class="ui avatar image" src="/favicons/favicon-32x32.png">
+      {{ end -}}
+      {{- .Site.Title -}}
+    </div>
+  </a>
+  <div class="right menu">
+    {{ $p := . -}}
+    {{/* ---- iterative over menu items --------------------------------- */}}
+    {{ range .Site.Menus.main -}}
+    {{ $active := or ($p.IsMenuCurrent "main" .) ($p.HasMenuCurrent "main" .) -}}
+    {{ with .Page }}{{ $active = or $active ( $.IsDescendant .) }}{{ end -}}
+    {{ $pre := .Pre -}}
+    {{ $post := .Post -}}
+    {{ $url := urls.Parse .URL -}}
+    {{ $baseurl := urls.Parse $.Site.Params.Baseurl -}}
+    <a class="{{- if $active }} active {{- end }} item"
+      href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .URL | relLangURL }}{{ end }}" {{- if ne $url.Host
+      $baseurl.Host }} target="_blank" {{- end -}}>
+      {{- with .Pre }}{{ $pre }}{{ end -}}
+      {{- .Name -}}
+      {{- with .Post }}{{ $post }}{{ end -}}
+    </a>
+    {{ end -}}
+    {{/* ---- end of menu loop ---------------------------------------- */}}
+    {{/* */}}
+    {{/* ---- jumbo - see params.yaml --------------------------------- */}}
+    {{ if .Site.Params.jumbo -}}
+    <span class="item">{{ partial "navbar-jumbo-selector.html" . -}}</span>
+    {{ end -}}
+    {{/* */}}
+    {{/* ---- languages ----------------------------------------------- */}}
+    {{ if (gt (len .Site.Home.Translations) 0) -}}
+    <a class="item">{{ partial "navbar-lang-selector.html" . -}}</a>
+    {{ end -}}
+    <a class="item">{{ partial "search-input.html" . }}</av>
+  </div>
+</nav>

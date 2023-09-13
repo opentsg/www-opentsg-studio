@@ -1,0 +1,24 @@
+{
+  "name": "hugo-metarex.media",
+  "version": "0.0.3",
+  "description": "Hugo site for metarex.media inspired by docsy.",
+  "main": "none.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:metarex-media/mrx-website.git"
+  },
+  "author": "bruce@mrmxf.com",
+  "license": "BSD-3-Clause-Attribution",
+  "bugs": {
+    "url": "https://github.com/metarex-media/mrx-website/issues"
+  },
+  "homepage": "https://metarex.media",
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.3.7",
+    "postcss-cli": "^10.1.0"
+  }
+}

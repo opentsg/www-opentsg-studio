@@ -1,0 +1,54 @@
+#                              _
+#   ___  __ _   _ __    _ __  | |  ___
+#  (_-< / _` | | '  \  | '_ \ | | / -_)
+#  /__/ \__,_| |_|_|_| | .__/ |_| \___|
+#                      |_|
+
+# REMEMBER it's .gitpod.yml - use this file in a comparator
+
+tasks:
+  - name:    cloggy
+    before:  clogrc/hugo-gp-tasks.sh
+    init:    clogrc/hugo-gp-tasks.sh
+    command: clogrc/hugo-gp-tasks.sh
+
+# port for server & godoc
+ports:
+  #hugo
+  - port: 1313
+    onOpen: open-browser
+#dev
+  - port: 3000
+    onOpen: open-browser
+#godoc
+  - port: 6060
+    onOpen: open-browser
+#dev
+  - port: 8080
+    onOpen: open-browser
+
+vscode:
+  extensions:
+    - mads-hartmann.bash-ide-vscode                          # bash scripting helper
+    - streetsidesoftware.code-spell-checker                  # code spell checker
+    - streetsidesoftware.code-spell-checker-scientific-terms # code spell checker - science
+    - ms-azuretools.vscode-docker                            # docker
+    - piersdeseilligny.betterfountain                        # fountain screen writer
+    - dbaeumer.vscode-eslint                                 # javascript lint
+#    - ms-toolsai.jupyter                                     # jupyter notebook support
+#    - ms-toolsai.jupyter-keymap                              # jupyter notebook support
+#    - ms-toolsai.jupyter-renderers                           # jupyter notebook support
+#    - rangav.vscode-thunder-client                           # postman clone
+#    - svelte.svelte-vscode                                   # svelte
+    - jock.svg                                               # svg viewer
+#    - hashicorp.terraform                                    # terraform
+    - ms-vscode.vscode-typescript-tslint-plugin              # typescript
+    - stkb.rewrap                                            # wrap markdown at column boundaries
+    - DotJoshJohnson.xml                                     # xml formatting xpath etc
+# --- hugo helpers
+    - kaellarkin.hugo-shortcode-syntax                       # hugo syntax highlighter
+    - akmittal.hugofy                                        # hugo helper
+    - DotJoshJohnson.xml
+    - rusnasonov.vscode-hugo
+    - fivethree.vscode-hugo-snippets
+    - budparr.language-hugo-vscode
