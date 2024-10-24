@@ -4,7 +4,7 @@ linkTitle:   opentsg-studio
 description: Code documentation for the Marimo helper.
 ---
 
-# opentsg-studio
+## opentsg-studio
 
 This documentation is generated from the python source code.
 

@@ -67,7 +67,7 @@ check:
         help-msg: update the version of golang or update clog.config.yaml/check
       - name: Hugo Version
         snippet: hugo version|grep -oE 'v([0-9]+\.[0-9]+)\.'|head -1
-        error-msg: v0.133. expected Golang version
+        error-msg: v0.133.6 expected Golang version
         error-if:
           - hugo-version: '[[ $VALUE != "v0.133." ]]'
         help-msg: update the version of hugo or update clog.config.yaml/check

@@ -4,7 +4,7 @@ linkTitle:   Extension
 description: Code documentation extending opentsg.
 ---
 
-# Extension
+## Extension
 
 Instructions for extending opentsg functionality will appear here:
 

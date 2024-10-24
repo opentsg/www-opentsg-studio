@@ -17,7 +17,7 @@ on:
 # global environment
 env:
   IMAGE: www-opentsg-studio
-  vHUGO: 0.133.5
+  vHUGO: 0.136.5
   vNODE: 20.15
   # don't force a BASE_URL so that a container works for both
   # https://test.xxx/ and https://xxx/
