@@ -1,16 +1,10 @@
 # hugo module configuration
 
-# metarex has migrated from docsy to the fohuw theme
-# this theme is  migrating away from bootstrap towards a full fomantic site
-# with simplified shortcuts that are created with partials to reduce custom code.
-
 # uncomment line below for temporary local development of module
-# replacements: "github.com/google/docsy -> ../../docsy"
+# replacements: "github.com/mrmxf/fohuw -> ../../fohuw"
 hugoVersion:
   extended: true
-  min: v1.121.0
+  min: v0.133.0
 imports:
   - path: github.com/mrmxf/fohuw
     disable: false
-#   - path: github.com/google/docsy/dependencies
-#     disable: false

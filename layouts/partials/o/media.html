@@ -1,0 +1,24 @@
+<!-- fohuw/o/media partial -->
+{{/*
+media with a caption
+*/}}
+{{- $DBG := false -}}
+{{with $DBG}}<p><hr style="height:3px; border:none; color:rgb(60,90,180); background-color:rgb(60,255,180);">start o/block</p>{{end}}
+{{/* ---handle src type--------------------------------------------------- */}}
+{{- $ext := strings.ToLower (path.Ext .src) -}}
+{{- $imgExt := slice ".jpg" ".jpeg" ".png" ".webp" ".gif" ".svg" -}}
+{{- $vidExt := slice ".mp4" ".mkv" -}}
+{{- $srcIsVideo := in $vidExt $ext -}}
+{{- $srcIsImage := in $imgExt $ext -}}
+{{- $id := "" -}}
+
+{{/* ---make src dict----------------------------------------------------- */}}
+{{ $srcDict := dict "src" .src "srcLink" .srcLink "srcClass" .srcClass}}
+{{/* --------------------------------------------------------------------- */}}
+
+<div class="{{.mediaClass}}">
+  {{- if $srcIsVideo }}{{ partial "o/media-video" $srcDict }}{{ end -}}
+  {{- if $srcIsImage }}{{ partial "o/media-image" $srcDict }}{{ end -}}
+</div>
+
+{{with $DBG}}<p>END o/block<hr style="height:3px; border:none; color:rgb(60,90,180); background-color:rgb(255,90,180);"></p>{{end}}

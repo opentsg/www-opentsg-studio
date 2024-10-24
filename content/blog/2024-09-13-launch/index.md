@@ -1,22 +1,23 @@
 ---
-title:       "2023-09-13 Coming Soon"
-linkTitle:   "2023-09-13 Coming Soon"
-date:        2023-09-13
-description: Information about the imminent launch of the Open Test Signal Generator.
+title:       "2024-09-13 Coming Soon"
+linkTitle:   "2024-09-13 Coming Soon"
+date:        2024-09-13
+description: Open Test Signal Generator Launch
 author:      Bruce Devlin [bruce]
-tags:        ["about", "bruce"]
 ---
 
-{{< card/media
-      mediaUrl =  "featured-logo-otsg.png"
-      mediaOn  =  "left"
-      widthFloat = 0.2
-      credit   =  ""
- >}}
+{{< f/block
+  id    = "summary"
+  src   = "featured-logo-otsg.png"
+  srcOn = "right"
+  srcWidth = 0.3
+  srcClass ="ui fluid image"
+  srcCredit = "[Bruce Devlin](https://mrmxf.com)"
+>}}
 <!-- markdownlint-disable MD025 -->
 # Open Test Signal Generator launch is imminent
 
-### Meet the creatives behind Rex:
+## Why opentsg?
 
 Creating a video test pattern has always been a dark art. You've needed special
 knowledge of the fundamentals of the eye, video sampling, color science, audio,
@@ -38,5 +39,4 @@ form and that community widgets will start appearing on test patterns around the
 world. If you want to be part of that community then [contact] us and we'll
 keep you informed of releases and beta test opportunities.
 
-{{< sitelinks >}}
-{{< /card/media >}}
+{{< /f/block >}}

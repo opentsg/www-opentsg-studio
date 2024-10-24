@@ -1,0 +1,79 @@
+---
+# yamllint disable rule:colons
+#                                                              _
+#  __ __ __ __ __ __ __ __ __  ___   ___   _ __   ___   _ _   | |_   ___  __ _
+#  \ V  V / \ V  V / \ V  V / |___| / _ \ | '_ \ / -_) | ' \  |  _| (_-< / _` |
+#   \_/\_/   \_/\_/   \_/\_/        \___/ | .__/ \___| |_||_|  \__| /__/ \__, |
+#                                         |_|                            |___/
+# #############################################################################
+
+# #############################################################################
+#        _                 _
+#   __  | |_    ___   __  | |__
+#  / _| | ' \  / -_) / _| | / /
+#  \__| |_||_| \___| \__| |_\_\
+# #############################################################################
+# check:
+
+# #############################################################################
+#               _                       _
+#   ___  _ _   (_)  _ __   _ __   ___  | |_   ___
+#  (_-< | ' \  | | | '_ \ | '_ \ / -_) |  _| (_-<
+#  /__/ |_||_| |_| | .__/ | .__/ \___|  \__| /__/
+#                  |_|    |_|
+# #############################################################################
+# --- command snippets clog <snippet> --------------------------------------------
+# --- IMPORTANT: command snippets stream their output {for terminals}
+# --- IMPORTANT:   shell snippets buffer their output (batch mode)
+#
+#    These will take priority over any scripts you load, so a snippet in this
+#    section will make a script of the same command name invisible.
+#    e.g.
+#      commandsnippets:
+#        watch: devtool server --port=1234 --mode=DEBUG 2>logs/dbg
+#
+#      can be run with the command
+#          clog watch
+#    con
+commandsnippets:
+  # this is a command snippet because it takes a while to complete
+  watch: hugo server --buildDrafts --buildExpired --buildFuture --disableFastRender --ignoreCache
+
+shellsnippets:
+  vCODE:           cat data/releases.yaml|grep version|head -1|grep -oE '[0-9]+\.[0-9]+\.[0-9]+'
+  git-message-ref: cat data/releases.yaml|grep note|head -1|sed -nr 's/(\s*note:\s+"{0,1})(.*)"{0,1}$/\2/p'
+  lfs-install: |
+    curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+    sudo apt-get install git-lfs
+
+
+# --- check project -----------------------------------------------------------
+check:
+  # setting to debug will break the workflow but give you more information
+  # setting to warning or error will effectively mute most of the output
+  checkLogLevel: Info
+  # --- clog Check default ----------------------------------------------------
+  build:
+    # report on clog-only properties
+    # report:
+    #   tag-ref:       clog Sh vCode
+    # a dependency check passes if the return status is 0 or the text value matches
+    dependencies:
+      - name: Golang Version
+        snippet: cat go.mod | grep -oE 'go\s([0-9]+\.[0-9]+)' | head -1 | grep -oE '[0-9]+\.[0-9]+'
+        error-msg: 1.22 expected Golang version
+        error-if:
+          - golang-version: '[[ $VALUE != "1.22" ]]'
+        help-msg: update the version of golang or update clog.config.yaml/check
+      - name: Hugo Version
+        snippet: hugo version|grep -oE 'v([0-9]+\.[0-9]+)\.'|head -1
+        error-msg: v0.133. expected Golang version
+        error-if:
+          - hugo-version: '[[ $VALUE != "v0.133." ]]'
+        help-msg: update the version of hugo or update clog.config.yaml/check
+      - name: Git-LFS
+        snippet: git lfs version|grep -oE '[0-9]+\.[0-9]+'|head -1
+        error-msg: Git LFS not installed
+        error-if:
+          - lfs-version: '[[ "$VALUE" < "3.5" ]]'
+        help-msg: try clog Sh lfs-install

@@ -12,7 +12,7 @@ linkTitle: opentsg
     <div class="four wide column">
 <!-- --- card ------------------------------------------------------------  -->
 {{< f/card-centered
-      src         =  "/img/logo-otsg.png"
+      src         =  "/r/img/logo-otsg.png"
       imgClass    =  "medium"
       header      =  "Women in Streaming Media Hackathon @ Eviden"
       id          =  "hackathon"

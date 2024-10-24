@@ -1,21 +1,21 @@
 {
-  "name": "hugo-metarex.media",
+  "name": "www-opentsg-studio",
   "version": "0.0.3",
-  "description": "Hugo site for metarex.media inspired by docsy.",
+  "description": "Hugo site for opentsg inspired by docsy.",
   "main": "none.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:metarex-media/mrx-website.git"
+    "url": "git@github.com:opentsg/www-opentsg-studio.git"
   },
   "author": "bruce@mrmxf.com",
   "license": "BSD-3-Clause-Attribution",
   "bugs": {
-    "url": "https://github.com/metarex-media/mrx-website/issues"
+    "url": "https://github.com/opentsg/www-opentsg-studio/issues"
   },
-  "homepage": "https://metarex.media",
+  "homepage": "https://opentsg.studio",
   "devDependencies": {
     "autoprefixer": "^10.4.0",
     "postcss": "^8.3.7",

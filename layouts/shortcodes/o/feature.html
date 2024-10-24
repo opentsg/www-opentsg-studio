@@ -1,0 +1,36 @@
+{{/*
+---* A feature is pulled from the file content/features/NAME.md
+---* name       = "NAME.md"                    # filename to be pulled
+---* src        = "/path/to/media"
+---* link       = "/path/to/click"
+---* srcPoster  = "/path/to/media-poster.png"  if the source is a video
+---* srcClass   = "ui fluid image"   # the class of the image/video
+---* divClass   = "ui basic segment" # the class of the outer div
+---* msgClass   = "ui basic message" # the class of the inner div
+*/}}
+{{/* --- create a page object for the included page ---------------------- */}}
+{{- $name := .Page.Title -}}
+{{- if (.Get "name") -}}{{- $name = printf "%s - %s" $name (.Get "name") -}}{{- end -}}
+{{- $link := .Get "link" -}}
+{{/* - $p = .Site.GetPage $name */}}
+{{ $divClass := .Get "divClass" | default "ui basic segment" }}
+{{ $msgClass := .Get "msgClass" | default "ui basic message" }}
+{{/* --- create dict for the media partial --------------------------------*/}}
+{{- $d := dict "page" .Page -}}
+{{/* --- populate the dict for the partial --------------------------------*/}}
+{{- $d = merge $d (dict "src" (.Get "src")) -}}
+{{- $d = merge $d (dict "srcLink" $link) -}}
+{{- $d = merge $d (dict "srcClass" "ui fluid image") -}}
+{{- $d = merge $d (dict "srcPoster" (.Get "srcPoster")) -}}
+<div class="{{$divClass}}">
+  <div class="{{$msgClass}}" style="height:100%;">
+    {{- if $link }}<a href="{{ $link }}">{{ end }}
+      <h2 class="header">{{$name}}</h2>
+      {{- if .Get "src"}}
+      {{ partial "o/media" $d }}
+      {{ end -}}
+      {{ .Inner | markdownify}}
+      {{- if $link }}
+    </a>{{ end }}
+  </div>
+</div>

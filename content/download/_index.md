@@ -1,13 +1,11 @@
 ---
-title:     "Downloads"
-linkTitle: "Downloads"
-
-url:       "/downloads/"
+title:     "Download"
+linkTitle: "Download"
 
 aliases:
 - /docs/download
 - /docs/downloads
-- /download
+- /downloads
 
 weight: 80
 menu:
@@ -23,14 +21,7 @@ resources:
     download: true
     description: Our Logo as an MP4.
     group: Demo
-- name: start.cmd
-  title: Start script for local docker execution
-  src: /downloads/start.cmd
-  params:
-    icon: file code outline
-    download: true
-    description: Start script for local docker execution
-    group: Demo
+
 # ------------------------------------------------------------------------------
 
 # ------------------------------------------------------------------------------

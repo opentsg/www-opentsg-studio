@@ -1,10 +1,11 @@
-# www-opentsg
+# www-opentsg-studio
+
 Built with github.com/mrmxf/fohuw.
 
 ## Forking, cloning & editing
 
-Once you've (cloned or forked & cloned) the repo, you need to install [git],
-[golang] v1.21.5, [node] v18.17.0 and [hugo] v0.121.1+ in your development
+Once you've (cloned) the repo, you need to install [git],
+[golang] v1.22+, [node] v18.17.0 and [hugo] v0.121.1+ in your development
 environment. My preference was to use [gitpod] which runs VS Code in your
 browser (on a phone on a train) as the dev environment to ensure I could update
 the site from anywhere, anytime on any device 😃.
@@ -41,6 +42,7 @@ go get
 hugo
 ```
 
+[fohuw]:             https://github.com/mrmxf/fohuw
 [Docsy]:             https://github.com/google/docsy
 [fomantic ui]:       https://fomantic-ui.com/
 [git]:               https://git-scm.com

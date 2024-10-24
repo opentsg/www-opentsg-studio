@@ -1,0 +1,71 @@
+{{/* --- block params -----(see partial o/block for html)----------------- */}}
+{{/* ----------------------------------------------------------------------*/}}
+{{/* ------ `id` is used to create an anchor ----------------------------- */}}
+{{- $id := .Get "id" | default (printf "block-%d" .Ordinal) -}}
+{{/* ------ `blockType` uses partial `o/block-<blockType>` -e.g-"include"- */}}
+  {{- $blockType := .Get "blockType" -}}
+  {{/* ------ `blockClass` prepends class names to the div---------------- */}}
+  {{- $blockClass := .Get "blockClass" | default "container" -}}
+  {{/* ------ `description` contains markdown body text------------------- */}}
+  {{- $description := .Get "description" -}}
+  {{/* ------ `Inner` contains markdown and follows description----------- */}}
+  {{- $inner := .Inner -}}
+  {{/* ------ `header` is the markdown h1 text---------------------------- */}}
+  {{- $header := .Get "header" -}}
+  {{/* ------ `headerLink` is an href to jump to-------------------------- */}}
+  {{- $headerLink := .Get "headerLink" -}}
+  {{/* ------ `meta` is shown in grey below the header-------------------- */}}
+  {{- $meta := .Get "meta" -}}
+  {{/* --- from param --(path to source file when blockType=include)-------*/}}
+  {{- $from := .Get "from" -}}
+  {{/* --- count param --(number of things to show e.g. blogs)-------*/}}
+  {{- $count := .Get "count" | default 1 -}}
+  {{/* --- skip param --(number of things to skip before output e.g. blogs)*/}}
+  {{- $skip := .Get "skip" | default 0 -}}
+  {{/* --- src params -----------------------------------------------------*/}}
+  {{/* ------ `src` is the url to an image or video----------------------- */}}
+  {{- $src := .Get "src" -}}
+  {{/* ------ `srcId` is an id for and anchor or control code------------- */}}
+  {{- $srcId := .Get "srcId" -}}
+  {{/* ------ `srcOn` is left | right | none------------------------------ */}}
+  {{- $srcOn := .Get "srcOn" | default "left" -}}
+  {{/* ------ `srcWidth` is 0.0-1.0 & becomes "xxx wide" for grid control- */}}
+  {{- $srcWidth := .Get "srcWidth" | default 0.25 -}}
+  {{- if not $src -}}{{ $srcWidth = 0.0 }}{{- end -}}
+  {{/* ------ `srcLink` is the href for clicking the image---------------- */}}
+  {{- $srcLink := .Get "srcLink" | default $headerLink -}}
+  {{/* ------ `srcClass` prepends class names to the div------------------ */}}
+  {{- $srcClass := .Get "srcClass" | default "ui image" -}}
+  {{/* ------ `srcPoster` is the poster url for a video------------------- */}}
+  {{- $srcPoster := .Get "srcPoster" -}}
+  {{/* --- src width for grid ----------------------------------------------*/}}
+  {{- $slice := slice "zero" "one" "two" "three" "four" "five" "six" "seven" "eight" "nine" "ten" "eleven" "twelve"
+  "thirteen" "fourteen" "fifteen" "sixteen" -}}
+  {{- $type := printf "%T" $srcWidth }}
+  {{- if ne $type "float64" }}{{ $srcWidth = 0.3}}{{ end -}}
+  {{- $r := math.Round ( mul 16.0 $srcWidth ) -}}
+  {{- $r = math.Min 16 ( math.Max 0 $r ) | int -}}
+  {{- $srcGrid := printf "%s wide" (index $slice $r) }}
+  {{- $txtGrid := printf "%s wide" (index $slice ( sub 16 $r )) }}
+  {{/* --- select the correct partial ---------------------------------------*/}}
+  {{- $d := dict "id" $id "page" .Page "from" $from -}}
+  {{/* --- populate the dict for the partial --------------------------------*/}}
+  {{- $d = merge $d (dict "blockType" $blockType) -}}
+  {{- $d = merge $d (dict "blockClass" $blockClass) -}}
+  {{- $d = merge $d (dict "count" $count) -}}
+  {{- $d = merge $d (dict "description" $description) -}}
+  {{- $d = merge $d (dict "inner" $inner) -}}
+  {{- $d = merge $d (dict "header" $header) -}}
+  {{- $d = merge $d (dict "meta" $meta) -}}
+  {{- $d = merge $d (dict "skip" $skip) -}}
+  {{- $d = merge $d (dict "src" $src) -}}
+  {{- $d = merge $d (dict "srcId" $srcId) -}}
+  {{- $d = merge $d (dict "srcOn" $srcOn) -}}
+  {{- $d = merge $d (dict "srcGrid" $srcGrid) -}}
+  {{- $d = merge $d (dict "txtGrid" $txtGrid) -}}
+  {{- $d = merge $d (dict "srcLink" $srcLink) -}}
+  {{- $d = merge $d (dict "srcClass" $srcClass) -}}
+  {{- $d = merge $d (dict "srcPoster" $srcPoster) -}}
+  {{- $partialName := "o/block" -}}
+  {{- if $blockType }}{{ $partialName = printf "%s-%s" $partialName $blockType }}{{ end -}}
+  {{- partial $partialName $d -}}

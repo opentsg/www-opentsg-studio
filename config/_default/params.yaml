@@ -44,7 +44,7 @@ pygmentsStyle: "tango"
 
 # --- site images --------------------------------------------------------------
 # First one is picked as the Twitter card image if not set on page.
-images: ["/img/logo-otsg.png"]
+images: ["/r/img/logo-otsg.png"]
 
 # --- is archived --------------------------------------------------------------
 # Flag used to decide whether this is an archived version of the site and so
@@ -60,30 +60,30 @@ site_is_archived: false
 # The jumbo selector is a categorised array number for the version of the docs represented in this doc set.
 # Used in the "version-banner" partial to display a version number for the
 # current doc set.
-No_jumbo:
-  - category: mrx-tool
-    items:
-    - item: "@latest"
-      url:  https://github.com/metarex-media/mrx-tool
-      icon: cloud download alternate icon
-    - item: "α alpha"
-      url:  https://github.com/metarex-media/mrx-tool/tree/3ab19f0c1e558e1f57467461abf75fb1f849d5fd
-  - category: mrx-demo
-    items:
-    - item: "@latest"
-      url:  https://github.com/metarex-media/mrx-demo
-      icon: cloud download alternate icon
-    - item: "α alpha"
-      url:  https://github.com/metarex-media/mrx-demo/tree/c6a28748f33be2db752fc73951de5b7ddc0033d8
+# No_jumbo:
+#   - category: mrx-tool
+#     items:
+#     - item: "@latest"
+#       url:  https://github.com/metarex-media/mrx-tool
+#       icon: cloud download alternate icon
+#     - item: "α alpha"
+#       url:  https://github.com/metarex-media/mrx-tool/tree/3ab19f0c1e558e1f57467461abf75fb1f849d5fd
+#   - category: mrx-demo
+#     items:
+#     - item: "@latest"
+#       url:  https://github.com/metarex-media/mrx-demo
+#       icon: cloud download alternate icon
+#     - item: "α alpha"
+#       url:  https://github.com/metarex-media/mrx-demo/tree/c6a28748f33be2db752fc73951de5b7ddc0033d8
 
 # A link to latest version of the docs. Used in the "version-banner" partial to
 # point people to the main doc site.
-url_latest_version: https://opentsg.io
+url_latest_version: https://opentsg.studio
 
 # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
-github_repo: https://github.com/mrmxf/opentsg-website
+github_repo: https://github.com/opentsg/www-opentsg-studio
 # An optional link to a related project repo. For example, the sibling repository where your product code lives.
-github_project_repo: https://github.com/mrmxf
+github_project_repo: https://github.com/opentsg
 
 # Specify a value here if your content directory is not in your repo's root directory
 # github_subdir: ""
@@ -109,7 +109,7 @@ ui:
 #  Set to true to disable breadcrumb navigation.
 breadcrumb_disable: false
 # Set to true to disable the About link in the site footer
-footer_about_disable: true
+footer_about_disable: false
 # Set to false if you don't want to display a logo (/static/brand/logo.svg) in the top navbar
 navbar_logo: true
 # Set to true if you don't want the top navbar to be translucent when over a `block/cover`, like on the homepage.
@@ -172,11 +172,6 @@ developer:
 # Site relevant links. These will show up on right side of footer and in the community page if you have one.
 site:
   - name: Privacy Policy
-    url: docs/reference/project/privacy/
+    url: /download/privacy/
     icon: "fab fa-user-shield"
-    desc: "metarex.media privacy policy"
-
-history:
-  - date: "2024-01-17"
-    version: "v0.2.0"
-    release: "hackathon update"
+    desc: "opentsg privacy policy"

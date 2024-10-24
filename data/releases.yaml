@@ -1,0 +1,6 @@
+releases:
+  -
+    version:  0.6.0
+    codename: alpha1
+    date:     2024-10-24
+    note:     refactor for launch

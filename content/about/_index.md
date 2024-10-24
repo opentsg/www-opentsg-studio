@@ -4,16 +4,10 @@ linkTitle:   Info
 date:        2023-09-13
 weight:      10
 description: What is opentsg?
-url:         /about
-categories:  ["About"]
-tags:        ["docs", "About"]
-menu:
-  main:
-    name: About
-    weight: 900
-  footer:
-    name: About
-    weight: 01
+# menu:
+#   main:
+#     name: About
+#     weight: 900
 ---
 
 ## `opentsg` the Open Test Signal Generator

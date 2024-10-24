@@ -1,5 +1,5 @@
 ---
-title: "opentsg Blog"
+title:     "opentsg Blog"
 linkTitle: "Blog"
 menu:
   main:

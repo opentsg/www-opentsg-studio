@@ -1,0 +1,9 @@
+{{/*
+---* default video object - autoplay, loop, muted
+*/}}
+{{- if .srcLink -}}<a href="{{ .srcLink }}">{{- end -}}
+  <video class="{{ .srcClass }}" autoplay loop muted>
+    <source src="{{ .src }}" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  {{- if .srcLink -}}</a>{{- end -}}

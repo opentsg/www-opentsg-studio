@@ -1,0 +1,16 @@
+{{/* --- media object params ----------------------------------------------*/}}
+{{- $id := .Get "id" | default "media" -}}
+{{- $mediaType := .Get "mediaType" -}}
+{{- $mediaClass := .Get "mediaClass" | default "container" -}}
+{{- $caption := .Get "caption" -}}
+{{/* --- src params -------------------------------------------------------*/}}
+{{- $src := .Get "src" -}}
+{{- $srcLink := .Get "srcLink" -}}
+{{- $srcClass := .Get "srcClass" | default "ui image" -}}
+{{- $srcPoster := .Get "srcPoster" -}}
+{{/* --- select the correct partial --------------------------------------*/}}
+{{- $d := dict "id" $id "mediaType" $mediaType "mediaClass" $mediaClass "caption" $caption -}}
+{{- $d = merge $d (dict "src" $src ) -}}
+{{- $d = merge $d (dict "srcLink" $srcLink "srcClass" $srcClass "srcPoster" $srcPoster) -}}
+{{- $partialName := "o/media" -}}
+{{- partial $partialName $d -}}
