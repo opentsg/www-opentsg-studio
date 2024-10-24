@@ -21,6 +21,7 @@
 {{- $d = merge $d (dict "src" (.Get "src")) -}}
 {{- $d = merge $d (dict "srcLink" $link) -}}
 {{- $d = merge $d (dict "srcClass" "ui fluid image") -}}
+{{- $d = merge $d (dict "srcStyle" (.Get "srcStyle")) -}}
 {{- $d = merge $d (dict "srcPoster" (.Get "srcPoster")) -}}
 <div class="{{$divClass}}">
   <div class="{{$msgClass}}" style="height:100%;">

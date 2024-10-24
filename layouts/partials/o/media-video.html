@@ -1,8 +1,10 @@
 {{/*
 ---* default video object - autoplay, loop, muted
 */}}
+{{- $style := "" -}}
+{{- if .srcStyle -}}{{- $style = printf "style=\"%s\"" .srcStyle -}}{{- end -}}
 {{- if .srcLink -}}<a href="{{ .srcLink }}">{{- end -}}
-  <video class="{{ .srcClass }}" autoplay loop muted>
+  <video class="{{ .srcClass }}" autoplay loop muted {{$style}}>
     <source src="{{ .src }}" type="video/mp4" />
     Your browser does not support the video tag.
   </video>

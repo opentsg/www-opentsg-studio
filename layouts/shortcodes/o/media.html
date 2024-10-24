@@ -7,10 +7,14 @@
 {{- $src := .Get "src" -}}
 {{- $srcLink := .Get "srcLink" -}}
 {{- $srcClass := .Get "srcClass" | default "ui image" -}}
+{{- $srcStyle := .Get "srcStyle" -}}
 {{- $srcPoster := .Get "srcPoster" -}}
 {{/* --- select the correct partial --------------------------------------*/}}
 {{- $d := dict "id" $id "mediaType" $mediaType "mediaClass" $mediaClass "caption" $caption -}}
 {{- $d = merge $d (dict "src" $src ) -}}
-{{- $d = merge $d (dict "srcLink" $srcLink "srcClass" $srcClass "srcPoster" $srcPoster) -}}
+{{- $d = merge $d (dict "srcLink" $srcLink) -}}
+{{- $d = merge $d (dict "srcStyle" $srcStyle) -}}
+{{- $d = merge $d (dict "srcClass" $srcClass) -}}
+{{- $d = merge $d (dict "srcPoster" $srcPoster) -}}
 {{- $partialName := "o/media" -}}
 {{- partial $partialName $d -}}
