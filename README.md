@@ -16,30 +16,16 @@ svelte user interaction widgets.
 ### Step by step dev environment setup (e.g. for mac)
 
 1. clone the site
-   * `git clone https://gitlab.com/mm-eng/www-mrmxf.git``
+   * `git clone https://github.com/opentsg/www-opentsg-studio.git`
 2. install the [extended](https://gohugo.io/installation) version of Hugo
-   * e.g. **mac** `brew install hugo`
-   * e.g. **windows**
-      ```
-      wsl
-      cd /tmp
-      curl -L  --output hugo.tgz https://github.com/gohugoio/hugo/releases/download/v0.121.2/hugo_extended_0.121.2_linux-amd64.tar.gz
-      tar zxvf hugo.tgz && chmod +x hugo
-      sudo mv hugo /usr/local/bin && hugo version
-      npm install -g sass
-      ```
-      note that it's the linux install inside wsl inside windows.
 3. Install [Dart Sass](https://gohugo.io/hugo-pipes/transpile-sass-to-css/#dart-sass)
-   * e.g. mac `brew install sass/sass/sass`
-   * e.g. ubuntu `sudo snap install dart-sass`
-   * e.g. ci/cd `npm ci -g sass`
 4. execute the following:
   *
 
 ```bash
 # install node packages with yarn
-go get
-hugo
+hugo get
+hugo server
 ```
 
 [fohuw]:             https://github.com/mrmxf/fohuw
@@ -54,14 +40,12 @@ hugo
 
 ## deploying
 
-Build the docker file and push it to your favorite image registry. On the host
-use this style of execution:
+The github action script `/.github/workflows/hugo-container.yaml` creates a
+docker container that can be viewed with:
 
 ```sh
-# pull the docker image
-
 # run the docker image for a proxy forwarder on port 10000
-docker run -d -p 10000:80 mrx-static
+docker run -d -rm -p 10000:80 <DOCKER_NS>/www-opentsg-studio-arm:x.y.z
 
 # check it's working
 curl localhost:10000
@@ -70,5 +54,4 @@ curl localhost:10000
 ## The videos and downloads don't show
 
 Due to the massive size of some of the content referenced on the site the
-NGINX front end is configured to dynamically mount the folders listed in the
-folder `assets/deploy/mounts.yaml`.
+NGINX front end is configured to dynamically mount the `/r` folder.
